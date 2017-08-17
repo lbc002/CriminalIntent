@@ -24,7 +24,7 @@ public class CrimeFragment extends Fragment{
     private CheckBox mSolvedCheckBox;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mCrime = new Crime();
     }
@@ -37,7 +37,7 @@ public class CrimeFragment extends Fragment{
         mTitleField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                    // Not required
             }
 
             @Override
@@ -48,7 +48,7 @@ public class CrimeFragment extends Fragment{
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                // Not required
             }
         });
 
