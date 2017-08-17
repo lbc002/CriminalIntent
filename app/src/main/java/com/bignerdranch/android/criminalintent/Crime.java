@@ -46,11 +46,8 @@ public class Crime {
     public Crime() {
         // Generate unique identifier
         mId = UUID.randomUUID();
-
+        // Set the Date to todays date
         DateFormat df = new android.text.format.DateFormat();
         mDate = df.format("yyyy-MM-dd hh:mm:ss a", new Date()).toString();
-
-
-
     }
 }
