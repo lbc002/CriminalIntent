@@ -12,7 +12,7 @@ import java.util.UUID;
 public class Crime {
     private UUID mId;
     private String mTitle;
-    private String mDate;
+    private Date mDate;
     private boolean mSolved;
 
     public UUID getId() {
@@ -27,11 +27,11 @@ public class Crime {
         mTitle = title;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return mDate;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         mDate = date;
     }
 
@@ -45,9 +45,16 @@ public class Crime {
 
     public Crime() {
         // Generate unique identifier
-        mId = UUID.randomUUID();
+        this(UUID.randomUUID());
+    }
+
+    public Crime(UUID id) {
+        // Generate unique identifier
+        mId = id;
+
+        mDate = new Date();
         // Set the Date to todays date
-        DateFormat df = new android.text.format.DateFormat();
-        mDate = df.format("yyyy-MM-dd hh:mm:ss a", new Date()).toString();
+//        DateFormat df = new android.text.format.DateFormat();
+//        mDate = df.format("yyyy-MM-dd hh:mm:ss a", new Date()).toString();
     }
 }
