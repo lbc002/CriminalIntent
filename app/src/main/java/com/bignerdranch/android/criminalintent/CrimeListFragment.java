@@ -24,7 +24,6 @@ public class CrimeListFragment extends Fragment {
     private CrimeAdapter mAdapter;
     private Button mNewCrimeButton;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -43,6 +42,8 @@ public class CrimeListFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+
         updateUI();
         return view;
     }
