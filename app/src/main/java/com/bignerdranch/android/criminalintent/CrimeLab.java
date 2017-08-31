@@ -47,6 +47,12 @@ public class CrimeLab {
         List<Crime> crimes = new ArrayList<>();
         CrimeCursorWrapper cursor = queryCrimes(null, null);
 
+//        for (int i = 0; i < 100; i++) {
+//            Crime crime = new Crime();
+//            crime.setTitle("Crime #" + i);
+//            crime.setSolved(i % 2 == 0); // Every other one
+//            crimes.add(crime);
+//        }
         try {
             cursor.moveToFirst();
             while (!cursor.isAfterLast()) {
@@ -62,8 +68,7 @@ public class CrimeLab {
 
     public Crime getCrime(UUID id) {
         CrimeCursorWrapper cursor = queryCrimes(
-                CrimeTable.Cols.UUID + " = ?",
-                new String[] { id.toString() }
+                CrimeTable.Cols.UUID + " = ?", new String[] { id.toString() }
         );
 
         try {
