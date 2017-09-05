@@ -14,6 +14,7 @@ public class Crime {
     private String mTitle;
     private Date mDate;
     private boolean mSolved;
+    private String mSuspect;
 
     public UUID getId() {
         return mId;
@@ -43,6 +44,14 @@ public class Crime {
         mSolved = solved;
     }
 
+    public String getSuspect() {
+        return mSuspect;
+    }
+
+    public void setSuspect(String suspect) {
+        mSuspect = suspect;
+    }
+
     public Crime() {
         // Generate unique identifier
         this(UUID.randomUUID());
@@ -57,4 +66,6 @@ public class Crime {
 //        DateFormat df = new android.text.format.DateFormat();
 //        mDate = df.format("yyyy-MM-dd hh:mm:ss a", new Date()).toString();
     }
+
+
 }
