@@ -43,7 +43,6 @@ public class CrimeListFragment extends Fragment {
             }
         });
 
-
         updateUI();
         return view;
     }
